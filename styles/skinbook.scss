@@ -1,6 +1,11 @@
 $sb-header-height: 64px;
 $sb-border: 1px solid #e0e5ee;
 
+$sb-tab-background: #222;
+$sb-tab-background-selected: #333;
+$sb-tab-color: #999;
+$sb-tab-color-selected: #fff;
+
 :root {
   height: 100vh;
 }
@@ -36,13 +41,18 @@ body,
 }
 .sb-tab {
   width: 72px;
-  background-color: #222222;
+  background-color: $sb-tab-background;
   .sb-tab-item {
     width: 100%;
     height: 72px;
+    color: $sb-tab-color;
+    &:hover {
+      color: $sb-tab-color-selected;
+    }
   }
   .sb-tab-item.sb-tab-selected {
-    background-color: #333333;
+    color: $sb-tab-color-selected;
+    background-color: $sb-tab-background-selected;
   }
 }
 .sb-tab-content {
