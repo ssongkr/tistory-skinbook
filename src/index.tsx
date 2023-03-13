@@ -1,7 +1,6 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import { createRoot } from 'react-dom/client'
+import { TistorySkinbook } from '~/App'
 import '../styles/index.scss'
 
-ReactDOM
-  .createRoot(document.getElementById('sb-root') as HTMLElement)
-  .render(<div>티스토리 스킨북</div>)
+createRoot(document.getElementById('sb-root') as HTMLElement)
+  .render(<TistorySkinbook />)
